@@ -38,7 +38,7 @@ io.on('connection',function(socket){
 
 });
 
-let port=process.env.POST||3000;
+let port=process.env.PORT||3000;
 http.listen(port,function(){
     console.log('listening on :3000');
 });
