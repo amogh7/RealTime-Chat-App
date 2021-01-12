@@ -10,6 +10,7 @@ app.get('/',function(req,res){
     // res.redirect("/index.html");
 });
 let users=[];
+
 io.on('connection',function(socket){
     console.log(`${socket.id} connected`);
     socket.on("joined-chat",function(name){
@@ -38,7 +39,6 @@ io.on('connection',function(socket){
 
 });
 
-let port=process.env.PORT||3000;
-http.listen(port,function(){
+http.listen(3000,function(){
     console.log('listening on :3000');
 });
